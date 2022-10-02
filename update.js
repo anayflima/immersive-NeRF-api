@@ -37,7 +37,7 @@ AFRAME.registerComponent('update-cam',{
 
         // // retrieves positions of camera
         // var rot = this.el.object3D.rotation;
-        var xyz = this.el.object3D.position;
+        
         // // retrieve center position of image
         // x = xyz.x
         // //y += xyz.y
@@ -57,11 +57,13 @@ AFRAME.registerComponent('update-cam',{
         
         // document.getElementById('im').setAttribute('rotation', `${pitch} ${yaw} ${roll}`);
 
-        if (xyz.x - x > 0) { 
-            if (cur_pos > 0) cur_pos--; }
-        if (xyz.x - x < 0) { 
-            if (cur_pos < length) cur_pos++; }
-        x = xyz.x;
+        // Uncomment this for AD or LR movement on website
+        // var xyz = this.el.object3D.position;
+        // if (xyz.x - x > 0) { 
+        //     if (cur_pos > 0) cur_pos--; }
+        // if (xyz.x - x < 0) { 
+        //     if (cur_pos < length) cur_pos++; }
+        // x = xyz.x;
 
         if (cur_pos >= 0 && cur_pos < length) {
              document.getElementById('im').setAttribute('src', jsonmap[cur_pos]);
