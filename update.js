@@ -20,9 +20,9 @@ AFRAME.registerComponent('thumbstick-logging',{
       this.el.addEventListener('thumbstickmoved', this.moveCam);
     },
     moveCam: function (evt) {
-      if (evt.detail.x > 0.95) { 
-        if (cur_pos > 0) cur_pos--; }
       if (evt.detail.x < -0.95) { 
+        if (cur_pos > 0) cur_pos--; }
+      if (evt.detail.x > 0.95) { 
         if (cur_pos < length) cur_pos++; }
     }
   });

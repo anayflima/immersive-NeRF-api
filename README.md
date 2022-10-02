@@ -1,6 +1,10 @@
 # Immersive NeRF
 ## Welcome to our official HackMIT '22 repository!
 
+### Host URL 🌎
+
+- [Open output model](https://immersive-nerf-api.herokuapp.com/)
+
 Our project is capable of creating a 3D model of a scene given a sparse set of 2D images, and then rendering that model within VR. It accomplishes this task by using a relatively new (2020) method in the computer vision/graphics community known as [NeRF](https://www.matthewtancik.com/nerf), or Neural Radiance Fields. The followig steps will provide a walkthrough of our pipeline, as well a brief description of each part...
 
 ### Data Collection/Preparation
