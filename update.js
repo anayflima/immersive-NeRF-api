@@ -110,7 +110,7 @@ AFRAME.registerComponent('update-cam',{
         //     if (cur_pos < length) cur_pos++; }
         // x = xyz.x;
 
-        cur_pos = ((rot.y * 180 / Math.PI) + 90) / (180/length);
+        cur_pos = ((rot.y * 180 / Math.PI) + 160) / (320/length);
 
 
         if (cur_pos >= 0 && cur_pos < length) {
