@@ -41,7 +41,7 @@ AFRAME.registerComponent('update-cam',{
 
 
         if (theta > -119 && theta < 119) {
-             document.getElementById('im').setAttribute('src', jsonmap[Math.round(theta + 59)]);
+             document.getElementById('im').setAttribute('src', jsonmap[Math.round((theta + 59)*4)]);
         }
     }
 });
