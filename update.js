@@ -40,7 +40,7 @@ AFRAME.registerComponent('update-cam',{
         // document.getElementById('im').setAttribute('rotation', `${pitch} ${yaw} ${roll}`);
 
 
-        if (theta > -59 && theta < -59 + 118) {
+        if (theta > -119 && theta < 119) {
              document.getElementById('im').setAttribute('src', jsonmap[Math.round(theta + 59)]);
         }
     }
