@@ -7,6 +7,9 @@
 
 Our project is capable of creating a 3D model of a scene given a sparse set of 2D images, and then rendering that model within VR. It accomplishes this task by using a relatively new (2020) method in the computer vision/graphics community known as [NeRF](https://www.matthewtancik.com/nerf), or Neural Radiance Fields. The followig steps will provide a walkthrough of our pipeline, as well a brief description of each part...
 
+### Dependencies
+##### Before you begin, create two environments using the files colmap_env.txt and nerf_env.txt located in ./nerf_code!
+
 ### Data Collection/Preparation
 1. Film a video of a given scene in such a way that many viewing directions are captured
 1. Take the video and input it into our **split.py** script that separates the video into frames and reduces their resolution
@@ -48,7 +51,7 @@ Be sure to update the --checkpoint with your ckpt file from ./logs/<experiment_n
 
 
 ### Transfer to VR
-###### In order to transfer our scene to the VR, you need to use both outputs from the rendering in the previous step (rendered images in --savedir, rendered_angles.json). These outputs must then be added to the ./VR/data/ to view the scene in VR.
+###### In order to transfer our scene to the VR, you need to use both outputs from the rendering in the previous step (rendered images in --savedir, rendered_angles.json). These outputs must then be added to the ./nerf/data/ directory to view the scene in VR.
 
 Then, you have to run the [add_padding.py](https://github.com/anayflima/immersive-NeRF-api/blob/main/add_padding.py) file to add padding to the images to mantain aspect ratio, and run the  [map_json.py](https://github.com/anayflima/immersive-NeRF-api/blob/main/map_json.py) file to  map the images to degree rotations. Finally, host a localhost from the index.html file located at the root repository.
 
