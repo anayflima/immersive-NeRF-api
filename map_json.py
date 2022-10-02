@@ -2,7 +2,7 @@ import json
 import os
 import numpy as np
 
-frames = sorted(os.listdir('data'), reverse=True)
+frames = sorted(os.listdir('data'))
 
 im_map = ['data/' + frames[j] for j,i in enumerate(np.linspace(0, 90, len(frames)))]
 
