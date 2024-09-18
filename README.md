@@ -50,10 +50,11 @@ python eval_nerf.py --config config/own.yml --checkpoint pretrained/lego-lowres/
 Be sure to update the --checkpoint with your ckpt file from ./logs/<experiment_name>/<ckpt>
 
 
-### Transfer to VR
-###### In order to transfer our scene to the VR, you need to use both outputs from the rendering in the previous step (rendered images in --savedir, rendered_angles.json). These outputs must then be added to the ./nerf/data/ directory to view the scene in VR.
+### Transfer to Web-Based VR
+###### In order to transfer our scene to the VR, you need to use both outputs from the rendering in the previous step (rendered images in --savedir, rendered_angles.json). These outputs must then be added to the ./nerf/data/ directory to view the scene in VR with A-Frame.
 
 Then, you have to run the [add_padding.py](https://github.com/anayflima/immersive-NeRF-api/blob/main/add_padding.py) file to add padding to the images to mantain aspect ratio, and run the  [map_json.py](https://github.com/anayflima/immersive-NeRF-api/blob/main/map_json.py) file to  map the images to degree rotations. Finally, host a localhost from the index.html file located at the root repository.
+* Note that the **index.html** file uses **A-Frame** – which is a framework built on top of Three.js and WebXR – to enable quick rendering of the NeRF scene with an XR rig that is HMD agnositc
 
 ### References:
 * [Original NeRF](https://www.matthewtancik.com/nerf)
